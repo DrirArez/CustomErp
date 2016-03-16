@@ -1,0 +1,11 @@
+div#formAjoutPatient{
+    margin-top : 5%;
+    margin-left: 30%;
+}
+select.chzn-select{
+    width: 150!important;
+    margin-left: 3%!important;
+}
+li#civilite{
+    margin-left: 7%;
+}
