@@ -37,22 +37,14 @@ if(isset($_POST['creer']) && isset($_POST['civilite']) && isset($_POST['nom']) &
 
            <div class="padded">
              <div class="form-group">
-               <!--<ul class="padded separate-sections">
-                  <li id="civilite">
-                     <label>Civitlite :</label>
-                        <select class="chzn-select" name="colors" >
-                           <option value="Monsieur" name='civilite'>Mr</option>
-                           <option value="Madame"   name='civilite'>Mme</option>
-                           <option value="Mlle"     name='civilite'>Mlle</option>
-                        </select>
-                  </li>
-               </ul>-->
+                  <p id="civilite"><label>Civilité : </label>
+                      <input type="radio" name="civilite" value="M."/>M.
+                       <input type="radio" name="civilite" value="Mlle" />Mlle.
+                        <input type="radio" name="civilite" value="Mme" />Mme.
+                   </p><br/>
              </div>
-             <p id="civilite"><label>Civilité : </label>
-<input type="radio" name="civilite" value="M."/>M.
-<input type="radio" name="civilite" value="Mlle" />Mlle.
-<input type="radio" name="civilite" value="Mme" />Mme.
-</p><br/>
+
+
             <div class="form-group">
                <label class="control-label col-lg-2">Nom</label>
                   <div class="col-lg-10">
