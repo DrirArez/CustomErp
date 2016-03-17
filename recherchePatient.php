@@ -2,6 +2,3 @@
 include('ressources.php');
 include('menu.php');
  ?>
-
-
- 

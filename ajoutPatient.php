@@ -7,9 +7,9 @@ function chargerClasse($className){
    require $className.'.php';
 }
 spl_autoload_register('chargerClasse');
-session_start();
 
-$db = new PDO('mysql:host=localhost;dbname=patients', 'root', '');
+
+$db = new PDO('mysql:host=localhost;dbname=patients', 'root', 'root');
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 
 $manager = new PatientManager($db);
@@ -20,9 +20,9 @@ if(isset($_POST['creer']) && isset($_POST['nom']) && isset($_POST['prenom']) && 
    $manager->add($malade);
 }
 
-
-
  ?>
+ <body>
+
  <div class="row">
    <div class="col-md-7" id="formAjoutPatient">
 
@@ -97,3 +97,5 @@ if(isset($_POST['creer']) && isset($_POST['nom']) && isset($_POST['prenom']) && 
 
    </div>
  </div>
+
+</body>
