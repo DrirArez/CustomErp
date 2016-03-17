@@ -15,7 +15,7 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
 $manager = new PatientManager($db);
 $malade  = new Patient();
 
-if(isset($_POST['creer']) && isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['age']) && isset($_POST['nDossier'])){
+if(isset($_POST['creer']) && isset($_POST['civilite']) && isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['age']) && isset($_POST['n_dossier'])){
    echo 'Validate';
    $manager->add($malade);
 }
@@ -48,6 +48,11 @@ if(isset($_POST['creer']) && isset($_POST['nom']) && isset($_POST['prenom']) && 
                   </li>
                </ul>-->
              </div>
+             <p id="civilite"><label>Civilité : </label>
+<input type="radio" name="civilite" value="M."/>M.
+<input type="radio" name="civilite" value="Mlle" />Mlle.
+<input type="radio" name="civilite" value="Mme" />Mme.
+</p><br/>
             <div class="form-group">
                <label class="control-label col-lg-2">Nom</label>
                   <div class="col-lg-10">
@@ -65,7 +70,7 @@ if(isset($_POST['creer']) && isset($_POST['nom']) && isset($_POST['prenom']) && 
              <div class="form-group">
                <label class="control-label col-lg-2">Date de naissance : </label>
                <div class="col-lg-10">
-                  <input name="date_naissance" type="text"  class="validate[required]">
+                  <input type="text"  class="validate[required]">
                </div>
              </div>
 
@@ -80,10 +85,20 @@ if(isset($_POST['creer']) && isset($_POST['nom']) && isset($_POST['prenom']) && 
              <div class="form-group">
                <label class="control-label col-lg-2">N°Dossier : </label>
                <div class="col-lg-10">
-                 <input name="nDossier" type="text"  class="validate[required]"/>
+                 <input name="n_dossier" type="text"  class="validate[required]"/>
                </div>
              </div>
 
+           </div>
+
+           <div class="form-group">
+
+             <input name="date_naissance" type="text" id="datetime24" data-format="DD-MM-YYYY HH:mm" data-template="DD / MM / YYYY     HH : mm" name="datetime" value="21-12-2012 20:30">
+             <script>
+             $(function(){
+                 $('#datetime24').combodate();
+             });
+             </script>
            </div>
 
            <div class="form-actions">
