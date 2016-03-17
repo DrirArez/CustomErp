@@ -13,3 +13,4 @@
 <link href="./stylesheets/myCss.css" media="screen" rel="stylesheet" type="text/css" />
 
 <script src="./javascripts/application.js" type="text/javascript"></script>
+<script src="./javascripts/combodate.js" type="text/javascript"></script>
